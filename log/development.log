@@ -15571,3 +15571,33 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-25 20:17:54 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bohdanlaluck/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 288ms (Views: 271.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/simple_pages/search" for 127.0.0.1 at 2018-09-25 20:18:00 -0400
+Processing by SimplePagesController#search as HTML
+  Rendering simple_pages/search.html.erb within layouts/application
+  Rendered simple_pages/search.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products?utf8=%E2%9C%93&q=kona&commit=Search" for 127.0.0.1 at 2018-09-25 20:18:04 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"kona", "commit"=>"Search"}
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%kona%')[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [1 times] (0.9ms)
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
