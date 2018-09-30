@@ -18,6 +18,7 @@ class SimplePagesController < ApplicationController
 
   end
 
+<<<<<<< HEAD
   def thank_you
   @name = params[:name]
   @email = params[:email]
@@ -28,4 +29,6 @@ class SimplePagesController < ApplicationController
       body: @message).deliver_now
   end
 
+=======
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 end

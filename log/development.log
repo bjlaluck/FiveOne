@@ -20082,6 +20082,7 @@ Processing by SimplePagesController#admin as HTML
 Completed 200 OK in 51ms (Views: 41.1ms | ActiveRecord: 0.4ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-09-30 17:33:31 -0400
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/bohdanlaluck/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
@@ -20108,10 +20109,39 @@ Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/products" for 127.0.0.1 at 2018-09-30 17:33:36 -0400
+=======
+Started GET "/" for 127.0.0.1 at 2018-09-30 17:35:51 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bohdanlaluck/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/simple_pages/landing_page.html.erb:4
+  Rendered simple_pages/landing_page.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 325ms (Views: 294.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-09-30 17:35:53 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-09-30 17:35:54 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:35:55 -0400
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Processing by ProductsController#index as HTML
   Rendering products/index.html.erb within layouts/application
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
   ↳ app/views/products/index.html.erb:9
+<<<<<<< HEAD
   Rendered collection of products/_product.html.erb [4 times] (2.1ms)
   Rendered products/index.html.erb within layouts/application (7.3ms)
 Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 0.2ms)
@@ -20129,6 +20159,25 @@ Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 1.0ms)
 
 
 Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:33:38 -0400
+=======
+  Rendered collection of products/_product.html.erb [4 times] (2.0ms)
+  Rendered products/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 56ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-09-30 17:35:56 -0400
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/index.html.erb:4
+  Rendered orders/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 57ms (Views: 45.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:35:57 -0400
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Processing by SimplePagesController#admin as HTML
   Rendering simple_pages/admin.html.erb within layouts/application
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
@@ -20141,12 +20190,17 @@ Processing by SimplePagesController#admin as HTML
   ↳ /Users/bohdanlaluck/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
   [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
   ↳ /Users/bohdanlaluck/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+<<<<<<< HEAD
   [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+=======
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
   ↳ /Users/bohdanlaluck/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
   [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
   ↳ /Users/bohdanlaluck/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
   [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
   ↳ /Users/bohdanlaluck/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+<<<<<<< HEAD
   Rendered products/_form.html.erb (231.5ms)
   Rendered simple_pages/admin.html.erb within layouts/application (235.1ms)
 Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.4ms)
@@ -20154,12 +20208,22 @@ Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.4ms)
 
   
 ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00007fc4c912bd40>:0x00007fc4c95ca950>
+=======
+  Rendered products/_form.html.erb (244.3ms)
+  Rendered simple_pages/admin.html.erb within layouts/application (249.5ms)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00007fcffa387760>:0x00007fcffc6b20a0>
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Did you mean?  @products):
     1: <%= form_with(model: product, local: true) do |form| %>
     2:   <% if product.errors.any? %>
     3:     <div id="error_explanation">
     4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
   
+<<<<<<< HEAD
 app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__3286013993764893969_70241584274760'
 app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb__1192070142652868880_70241584306520'
 Started GET "/" for 127.0.0.1 at 2018-09-30 17:34:32 -0400
@@ -20233,10 +20297,25 @@ Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.3ms)
   
 ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00007fc4c912bd40>:0x00007fc4c6db2210>
 Did you mean?  @products):
+=======
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__1559666035916262027_70265634887940'
+app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb___2706865346983610038_70265634919680'
+Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:37:19 -0400
+Processing by SimplePagesController#admin as HTML
+  Rendering simple_pages/admin.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.1ms)
+  Rendered simple_pages/admin.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
     1: <%= form_with(model: product, local: true) do |form| %>
     2:   <% if product.errors.any? %>
     3:     <div id="error_explanation">
     4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<<<<<<< HEAD
   
 app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__3286013993764893969_70241563351940'
 app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb__1192070142652868880_70241563284920'
@@ -20313,18 +20392,57 @@ Completed 500 Internal Server Error in 249ms (ActiveRecord: 0.4ms)
   
 ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x00007fb22b953348>:0x00007fb227e6ad30>
 Did you mean?  @products):
+=======
+    5: 
+  
+app/views/products/_form.html.erb:2:in `block in _app_views_products__form_html_erb__1559666035916262027_70265637297200'
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__1559666035916262027_70265637297200'
+app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb___2706865346983610038_70265637263000'
+Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:38:19 -0400
+Processing by SimplePagesController#admin as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/simple_pages_controller.rb:17
+  Rendering simple_pages/admin.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.2ms)
+  Rendered simple_pages/admin.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
     1: <%= form_with(model: product, local: true) do |form| %>
     2:   <% if product.errors.any? %>
     3:     <div id="error_explanation">
     4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<<<<<<< HEAD
   
 app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__3341845315370284668_70201575136180'
 app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb___1118768141710491773_70201575169000'
 Started GET "/" for 127.0.0.1 at 2018-09-30 18:07:25 -0400
+=======
+    5: 
+  
+app/views/products/_form.html.erb:2:in `block in _app_views_products__form_html_erb__1559666035916262027_70265603414420'
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__1559666035916262027_70265603414420'
+app/views/simple_pages/admin.html.erb:5:in `_app_views_simple_pages_admin_html_erb___2706865346983610038_70265603309700'
+Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:38:39 -0400
+Processing by SimplePagesController#admin as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/simple_pages_controller.rb:17
+  Rendering simple_pages/admin.html.erb within layouts/application
+  Rendered products/_form.html.erb (8.5ms)
+  Rendered simple_pages/admin.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 60ms (Views: 44.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-30 17:38:54 -0400
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Processing by SimplePagesController#landing_page as HTML
   Rendering simple_pages/landing_page.html.erb within layouts/application
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
   ↳ app/views/simple_pages/landing_page.html.erb:4
+<<<<<<< HEAD
   Rendered simple_pages/landing_page.html.erb within layouts/application (13.9ms)
 Completed 200 OK in 79ms (Views: 70.3ms | ActiveRecord: 1.0ms)
 
@@ -20344,10 +20462,32 @@ Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/products" for 127.0.0.1 at 2018-09-30 18:07:30 -0400
+=======
+  Rendered simple_pages/landing_page.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-09-30 17:38:55 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-09-30 17:38:55 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:38:56 -0400
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Processing by ProductsController#index as HTML
   Rendering products/index.html.erb within layouts/application
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
   ↳ app/views/products/index.html.erb:9
+<<<<<<< HEAD
   Rendered collection of products/_product.html.erb [4 times] (2.1ms)
   Rendered products/index.html.erb within layouts/application (7.2ms)
 Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.2ms)
@@ -20671,10 +20811,142 @@ Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-09-30 18:26:21 -0400
+=======
+  Rendered collection of products/_product.html.erb [4 times] (1.7ms)
+  Rendered products/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-09-30 17:38:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:72
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:39:00 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (3.2ms)
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 76ms (Views: 66.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-09-30 17:39:04 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:72
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.2ms)
+  Rendered products/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 71ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:39:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 94ms (Views: 81.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-09-30 17:39:12 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.2ms)
+  Rendered products/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 54ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:39:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (2.0ms)
+  Rendered products/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 93ms (Views: 76.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-09-30 17:39:26 -0400
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/index.html.erb:4
+  Rendered orders/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 56ms (Views: 45.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2018-09-30 17:39:27 -0400
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:8
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:10
+  Rendered orders/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 56ms (Views: 47.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-09-30 17:39:34 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (1.8ms)
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 92ms (Views: 78.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-09-30 17:39:36 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:72
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 84ms (Views: 73.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/simple_pages/admin" for 127.0.0.1 at 2018-09-30 17:39:40 -0400
+Processing by SimplePagesController#admin as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/simple_pages_controller.rb:17
+  Rendering simple_pages/admin.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.3ms)
+  Rendered simple_pages/admin.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 100ms (Views: 89.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products?utf8=%E2%9C%93&q=kona&commit=Search" for 127.0.0.1 at 2018-09-30 17:39:44 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"kona", "commit"=>"Search"}
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%kona%')[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [1 times] (1.2ms)
+  Rendered products/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 60ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-30 17:39:47 -0400
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 Processing by SimplePagesController#landing_page as HTML
   Rendering simple_pages/landing_page.html.erb within layouts/application
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
   ↳ app/views/simple_pages/landing_page.html.erb:4
+<<<<<<< HEAD
   Rendered simple_pages/landing_page.html.erb within layouts/application (8.2ms)
 Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.8ms)
 
@@ -20704,5 +20976,9 @@ Content-Transfer-Encoding: 7bit
   Rendering simple_pages/thank_you.html.erb within layouts/application
   Rendered simple_pages/thank_you.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 984ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+=======
+  Rendered simple_pages/landing_page.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+>>>>>>> 1335111a58e71d500899e38efcf61d7bf3412e1d
 
 
