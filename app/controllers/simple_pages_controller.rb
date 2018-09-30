@@ -14,7 +14,7 @@ class SimplePagesController < ApplicationController
 
   def admin
 
-    @product = Product.find(1)
+    @product = Product.first
 
   end
 
