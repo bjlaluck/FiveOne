@@ -91,3 +91,13 @@ img {
   
   object-fit:scale-down;
 }
+
+.navbar-nav>li>form {
+  line-height: 20px;
+}
+
+.nav>li>form {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}

@@ -12,4 +12,10 @@ class SimplePagesController < ApplicationController
     @products = Product.all
   end
 
+  def admin
+
+    @product = Product.find(1)
+
+  end
+
 end
